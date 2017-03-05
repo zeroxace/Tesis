@@ -2,10 +2,10 @@
 
 class configDb {
 
-    var $host = '31.220.104.1';
-    var $dbname = "u611574828_vet";
-    var $user = "u611574828_root";
-    var $pass = "desarrollo2016";
+    var $host = 'localhost';
+    var $dbname = "moodle";
+    var $user = "root";
+    var $pass = "";
 
     
 //    var $host = 'localhost';
