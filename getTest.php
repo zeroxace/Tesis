@@ -12,7 +12,10 @@ class gettest {
 
         $crud = new crud();
 
-        $resp = $crud->consultar("SELECT str_nombres,str_apellidos,dtm_fecha_nacimiento FROM w001_usuarios LEFT JOIN w000_companias ON w001_usuarios.num_id_cia = w000_companias.num_id_cia");
+        
+        $sql = "SELECT str_nombres,str_apellidos,dtm_fecha_nacimiento FROM w001_usuarios LEFT JOIN w000_companias ON w001_usuarios.num_id_cia = w000_companias.num_id_cia";
+        
+        $resp = $crud->consultar($sql);
         header('Content-Type: application/json');
         echo json_encode($resp);
         
@@ -24,8 +27,24 @@ class gettest {
 //        }
     }
 
+    
+    function consultar_user() {
+        
+        $crud = new crud();
+
+        
+        $sql = "SELECT * FROM mdl_assignfeedback_comments";
+        echo $sql;
+        $resp = $crud->consultar($sql);
+        header('Content-Type: application/json');
+        echo json_encode($resp);
+        
+        
+    }
 }
 
 $getest = new gettest();
-$getest->consultar_test();
+$getest->consultar_user();
+
+//$getest->consultar_test();
 ?>
