@@ -10,7 +10,7 @@ $data_back = json_decode(file_get_contents('php://input'));
 $identificacion=$_POST["identificacion"];
 $contrasena = $_POST["contrasena"];
 
-$sql = 'SELECT * FROM estudiante WHERE contrasena="'.$contrasena.'" AND identificacion="'.$identificacion.'"';
+$sql = 'SELECT * FROM profesor WHERE contrasena="'.$contrasena.'" AND identificacion="'.$identificacion.'"';
 $resp = $crud->consultar($sql);
 
 
