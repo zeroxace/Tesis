@@ -13,7 +13,7 @@ $descripcion=$_POST["descripcion"];
 $respuestaA=$_POST["respuestaA"];
 $respuestaB=$_POST["respuestaB"]; 
 $respuestaC=$_POST["respuestaC"];
-
+$respuestaVerdadera=$_POST["respuestaVerdadera"];
 $sql = 'INSERT INTO u611574828_moodl.Preguntas 
 	( 
 	id_profesor, 
