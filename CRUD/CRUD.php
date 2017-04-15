@@ -24,7 +24,7 @@ class crud {
     }
 
     function insertar($sql) {
-         echo $sql;
+        
         try {
             $conexion = new conexion();
             $pdo = $conexion->conect();
