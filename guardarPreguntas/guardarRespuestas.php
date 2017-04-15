@@ -14,6 +14,8 @@ $respuestaA=$_POST["respuestaA"];
 $respuestaB=$_POST["respuestaB"]; 
 $respuestaC=$_POST["respuestaC"];
 $respuestaVerdadera=$_POST["respuestaVerdadera"];
+$numeroPregunta=$_POST["numeroPregunta"];
+
 $sql = 'INSERT INTO u611574828_moodl.Preguntas 
 	( 
 	id_profesor, 
@@ -21,7 +23,8 @@ $sql = 'INSERT INTO u611574828_moodl.Preguntas
 	respuestaA, 
 	respuestaB, 
 	respuestaC, 
-	respuestaVerdadera
+	respuestaVerdadera,
+        numeroPregunta
 	)
 	VALUES
 	( 
@@ -30,7 +33,8 @@ $sql = 'INSERT INTO u611574828_moodl.Preguntas
 	"'.$respuestaA.'", 
 	"'.$respuestaB.'", 
 	"'.$respuestaC.'", 
-	"'.$respuestaVerdadera.'"
+	"'.$respuestaVerdadera.'",
+        "'.$numeroPregunta.'"
 	);
 ';
 
