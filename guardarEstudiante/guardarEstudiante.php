@@ -14,6 +14,8 @@ $nombres = $_POST["nombres"];
 $contrasena = $_POST["contrasena"];
 $grado = $_POST["grado"];
 $identificacion = $_POST["identificacion"];
+$tipoUsuario = $_POST["tipoUsuario"];
+
 $sql = '
 INSERT INTO u611574828_moodl.estudiante 
 	( 
@@ -29,7 +31,8 @@ INSERT INTO u611574828_moodl.estudiante
 	"' . $nombres . '",
         "' . $identificacion . '", 
 	"' . $grado . '", 
-	"' . $contrasena . '"
+	"' . $contrasena . '",
+        "' . $tipoUsuario . '"
 	)';
 
 $resp = $crud->insertar($sql);
