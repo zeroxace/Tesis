@@ -12,8 +12,7 @@ $id_profesor=$_POST["id_profesor"];
 $descripcion=$_POST["descripcion"];
 $respuestaA=$_POST["respuestaA"];
 $respuestaB=$_POST["respuestaB"]; 
-$respuestaC=$_POST["respuestaC"]; 
-$respuestaVerdadera=$_POST["respuestaVerdadera"];
+$respuestaC=$_POST["respuestaC"];
 
 $sql = 'INSERT INTO u611574828_moodl.Preguntas 
 	( 
@@ -26,16 +25,16 @@ $sql = 'INSERT INTO u611574828_moodl.Preguntas
 	)
 	VALUES
 	( 
-	'.$id_profesor.', 
-	'.$descripcion.', 
-	'.$respuestaA.', 
-	'.$respuestaB.', 
-	'.$respuestaC.', 
-	'.$respuestaVerdadera.'
+	"'.$id_profesor.'", 
+	"'.$descripcion.'", 
+	"'.$respuestaA.'", 
+	"'.$respuestaB.'", 
+	"'.$respuestaC.'", 
+	"'.$respuestaVerdadera.'"
 	);
 ';
 
-$resp = $crud->insertar();
+$resp = $crud->insertar($sql);
 
 $jsonRespn[] = array('resp'=> $resp);
 header('Content-Type: application/json');
