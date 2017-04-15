@@ -23,7 +23,8 @@ INSERT INTO u611574828_moodl.estudiante
 	nombres, 
 	identificacion, 
 	grado, 
-	contrasena
+	contrasena,
+        tipoUsuario
 	)
 	VALUES
 	( 
