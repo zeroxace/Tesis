@@ -8,35 +8,29 @@ $data_back = json_decode(file_get_contents('php://input'));
 // set json string to php variables
 //echo $data_back->{"email"};
 
-$id_profesor=$_POST["id_profesor"];
-$descripcion=$_POST["descripcion"];
-$respuestaA=$_POST["respuestaA"];
-$respuestaB=$_POST["respuestaB"]; 
-$respuestaC=$_POST["respuestaC"];
-$respuestaVerdadera=$_POST["respuestaVerdadera"];
-$numeroPregunta=$_POST["numeroPregunta"];
+$id_pregunta=$_POST["id_pregunta"];
+$id_estudiante=$_POST["id_estudiante"];
+$puntaje=$_POST["puntaje"];
+$id_profesor=$_POST["id_profesor"]; 
+$respuesta=$_POST["respuesta"];
 
-$sql = 'INSERT INTO u611574828_moodl.Preguntas 
+$sql = '
+INSERT INTO u611574828_moodl.juego_respuestas 
 	( 
+	id_pregunta, 
+	id_estudiante, 
+	puntaje, 
 	id_profesor, 
-	descripcion, 
-	respuestaA, 
-	respuestaB, 
-	respuestaC, 
-	respuestaVerdadera,
-        numeroPregunta
+	respuesta
 	)
 	VALUES
 	( 
-	"'.$id_profesor.'", 
-	"'.$descripcion.'", 
-	"'.$respuestaA.'", 
-	"'.$respuestaB.'", 
-	"'.$respuestaC.'", 
-	"'.$respuestaVerdadera.'",
-        "'.$numeroPregunta.'"
-	);
-';
+	'.$id_pregunta.', 
+	'.$id_estudiante.', 
+	'.$puntaje.', 
+	'.$id_profesor.', 
+	"'.$respuesta.'"
+	)';
 
 $resp = $crud->insertar($sql);
 
