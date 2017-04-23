@@ -13,8 +13,6 @@ $sql = 'SELECT * FROM Preguntas WHERE id_profesor='.$id_profesor.'';
 $resp = $crud->consultar($sql);
 
 
-
-
 $jsonRespn[] = array('resp'=> $resp);
 header('Content-Type: application/json');
  

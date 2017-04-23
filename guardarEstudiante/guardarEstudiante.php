@@ -38,7 +38,16 @@ INSERT INTO u611574828_moodl.estudiante
 
 $resp = $crud->insertar($sql);
 
-$jsonRespn[] = array('resp' => $resp);
+if($resp=="-1"){
+   $jsonRespn[] = array('resp' => $resp,'dato'=>"dsd"); 
+}
+
+if($resp=="1"){
+    $jsonRespn[] = array('resp' => $resp);  
+}
+    
+    
+
 header('Content-Type: application/json');
 
 echo json_encode($jsonRespn);
